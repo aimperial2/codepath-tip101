@@ -35,7 +35,7 @@ print(count_element(head, 1))
 # Output: 2
 
 
-# PROBLEM SET VERSION 2
+##### PROBLEM SET VERSION 2 #########
 # Problem  1: One to many
 # The assignment statement to the head variable below creates the linked list Mario -> Luigi -> Wario. 
 # Break apart the assignment statement into multiple lines with one call to the Node constructor per line to recreate the list.
@@ -73,7 +73,7 @@ def find_max(head):
 	
 # Example Usage
 # Linked List: 5 -> 6 -> 7 -> 8 
-head = Node(5, Node(6, Node(7, Node(8))))
-
-print(find_max(head))
 # Input: head = 5
+head = Node(5, Node(6, Node(7, Node(8))))
+print(find_max(head))
+
