@@ -60,25 +60,26 @@ def is_univalued(root):
 # Input: root = 1
 # Expected Output: False
 
-root1 = TreeNode(1)
-root1.left = TreeNode(1)
-root1.right = TreeNode(1)
-root1.left.left = TreeNode(1)
-root1.left.right = TreeNode(1)
-root1.right.right = TreeNode(1)
+#Commented out 
+# root1 = TreeNode(1)
+# root1.left = TreeNode(1)
+# root1.right = TreeNode(1)
+# root1.left.left = TreeNode(1)
+# root1.left.right = TreeNode(1)
+# root1.right.right = TreeNode(1)
 
 # Test it
-print(is_univalued(root1))  # Should print True
+# print(is_univalued(root1))  # Should print True
 
-root2 = TreeNode(1)
-root2.left = TreeNode(1)
-root2.right = TreeNode(2)  # This is the problem node!
-root2.left.left = TreeNode(1)
-root2.left.right = TreeNode(1)
-root2.right.right = TreeNode(1)
+# root2 = TreeNode(1)
+# root2.left = TreeNode(1)
+# root2.right = TreeNode(2)  # This is the problem node!
+# root2.left.left = TreeNode(1)
+# root2.left.right = TreeNode(1)
+# root2.right.right = TreeNode(1)
 
 # Test it
-print(is_univalued(root2))  # Should print False
+# print(is_univalued(root2))  # Should print False
 
 
 # Problem 2: Binary Tree Height
@@ -117,13 +118,13 @@ def height(root):
 #   / \    
 #  1   3    
 
-root3 = TreeNode(4)
-root3.left = TreeNode(2)
-root3.right = TreeNode(5)  # This is the problem node!
-root3.left.left = TreeNode(1)
-root3.left.right = TreeNode(3)
+# root3 = TreeNode(4)
+# root3.left = TreeNode(2)
+# root3.right = TreeNode(5)  # This is the problem node!
+# root3.left.left = TreeNode(1)
+# root3.left.right = TreeNode(3)
 
-print(height(root3))
+# print(height(root3))
 # Input: root = 4
 # Expected Output: 3
 
@@ -134,8 +135,8 @@ print(height(root3))
 # Input: root = 4
 # Expected Output: 1
 
-root4 = TreeNode(4)
-print(height(root4))
+# root4 = TreeNode(4)
+# print(height(root4))
 
 
 class TreeNode():
@@ -199,4 +200,21 @@ def remove_bst(root, key):
 		# Recursively remove the successor (which now has the current node's value)
 	# Return the root of the updated tree
     return root
-     
+
+# Example Input Tree #1: (tree depicted using keys) 
+
+#       10
+#      /  \
+#     /    \
+#    5      15
+#   / \     / \
+#  1   8   13  16
+root5 = TreeNode(10, "hello")
+root5.left = TreeNode(5, "hi")
+root5.right = TreeNode(15, "privyet")
+root5.left.left = TreeNode(1, "annyeong")
+root5.left.right = TreeNode(8, "konnichiwa")
+root5.right.left = TreeNode(13, "hola")
+root5.right.right = TreeNode(16, "kumusta")
+
+print(remove_bst(root5, 10))
